@@ -1,0 +1,179 @@
+/* src/components/nav/Nav.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+.headerScrolled {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 1rem;
+  height: 4rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoScrolled {
+  background: none; /* Remove o gradiente */
+  color: var(--text-primary); /* Define a cor para o branco do tema */
+  -webkit-text-fill-color: var(--text-primary); /* Garante a sobrescrita da cor */
+}
+
+.navDesktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navDesktop {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+/* 🧠 Por que esta mudança? Resetando a aparência padrão do botão. */
+.navLink {
+  position: relative;
+  background-color: transparent; /* Remove o fundo cinza padrão */
+  border: none; /* Remove a borda padrão */
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 0.375rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+.navLink:hover {
+  color: var(--text-primary);
+}
+.navLinkActive {
+  color: var(--text-primary);
+}
+
+.activeLinkIndicator {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(251, 252, 247, 0.05);
+  border-radius: 0.375rem;
+  z-index: -1;
+}
+
+.contactButton {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contactButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000000;
+    background-color: var(--secondary-accent);
+    border-radius: 0.375rem;
+    border: none; /* Reset explícito */
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .contactButton:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(232, 208, 164, 0.2);
+  }
+}
+
+/* --- ESTILOS MENU MOBILE --- */
+
+.mobileMenuToggle {
+  display: block;
+  background-color: #45f86f45; /* Reset */
+  border: none; /* Reset */
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+  border-radius: 0.375rem;
+}
+.mobileMenuToggle:hover {
+  color: var(--text-primary);
+}
+@media (min-width: 768px) {
+  .mobileMenuToggle {
+    display: none;
+  }
+}
+
+.mobileMenuDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.mobileNav {
+  /* 🧠 Por que esta mudança?
+     O fundo agora é sólido, usando a cor alternativa do tema,
+     o que garante que ele sempre contraste com o fundo preto da página.
+  */
+  background-color: var(--background-alt); /* Fundo sólido de cinza escuro */
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobileNavLink {
+  background-color: transparent; /* Reset */
+  border: none; /* Reset */
+  padding: 0.75rem 1rem;
+  text-align: left;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.mobileNavLink:hover {
+  background-color: rgba(251, 252, 247, 0.03);
+  color: var(--text-primary);
+}
+.mobileNavLinkActive {
+  background-color: var(--primary-accent);
+  color: var(--text-primary);
+}
