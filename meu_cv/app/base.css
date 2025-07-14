@@ -1,0 +1,35 @@
+
+/* app/base.css */
+
+/* Reset básico para garantir consistência entre navegadores */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Definir altura mínima para o html e body */
+html,
+body {
+  height: 100%;
+}
+
+/* Remover estilos de lista padrão */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remover sublinhado padrão de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,181 +1,173 @@
-# Portfolio José Anderson - NextJS
+# Meu Currículo Web
 
-Um portfolio profissional moderno desenvolvido com NextJS, TypeScript e Tailwind CSS, apresentando um design minimalista com tema escuro e cores vibrantes que transmitem alegria.
+Este é um projeto de currículo web moderno e responsivo, desenvolvido com Next.js, TypeScript e Tailwind CSS. Ele serve como um portfólio digital interativo, otimizado para performance, SEO e experiência do usuário.
 
-## 🚀 Características
+## Visão Geral do Projeto
 
-- **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- **Tema Escuro**: Interface elegante com cores harmoniosas (ciano, rosa, verde)
-- **Animações Suaves**: Transições e efeitos visuais modernos
-- **Formulário de Contato**: Sistema funcional de envio de mensagens
-- **Performance Otimizada**: Carregamento rápido e experiência fluida
-- **SEO Otimizado**: Metadados configurados para melhor indexação
+O objetivo principal deste projeto é apresentar as informações profissionais de forma clara, concisa e visualmente atraente. A aplicação é construída com foco em:
 
-## 🛠️ Tecnologias Utilizadas
+- **Performance Otimizada**: Carregamento rápido e eficiente para uma excelente experiência do usuário.
+- **Design Responsivo**: Compatibilidade total com dispositivos móveis e desktops, garantindo uma visualização perfeita em qualquer tela.
+- **SEO Otimizado**: Estrutura semântica e metadados configurados para melhor ranqueamento em mecanismos de busca.
+- **Acessibilidade**: Conformidade com padrões WCAG para garantir que o conteúdo seja acessível a todos os usuários.
+- **Manutenibilidade**: Código limpo, modular e bem estruturado, facilitando futuras atualizações e expansões.
 
-- **NextJS 15.3.4** - Framework React para produção
-- **TypeScript** - Tipagem estática para JavaScript
-- **Tailwind CSS** - Framework CSS utilitário
-- **React Hooks** - Gerenciamento de estado moderno
-- **CSS Animations** - Animações personalizadas
+## Tecnologias Utilizadas
 
-## 📁 Estrutura do Projeto
+O projeto utiliza um conjunto de tecnologias modernas para garantir robustez, escalabilidade e uma ótima experiência de desenvolvimento:
+
+### Core Frameworks
+
+- **Next.js (v14.x)**: Framework React para renderização server-side, geração estática e roteamento.
+- **React (v18.x)**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript (v5.x)**: Superset do JavaScript que adiciona tipagem estática.
+
+### Estilização e Design
+
+- **Tailwind CSS (v3.x)**: Framework CSS utilitário para construção rápida de interfaces responsivas.
+- **Framer Motion (v10.x)**: Biblioteca para animações fluidas e interativas.
+- **Lucide React (v0.300.x)**: Conjunto de ícones SVG otimizados para React.
+
+### Funcionalidades e Interação
+
+- **React Hook Form (v7.x)**: Para gerenciamento de formulários com validação eficiente.
+- **Zod (v3.x)**: Biblioteca de validação de esquemas TypeScript-first.
+- **Nodemailer (v6.x)**: Para envio de e-mails através do formulário de contato (via API Route).
+
+### Ferramentas de Desenvolvimento e Qualidade
+
+- **ESLint (v8.x)**: Ferramenta de linting para manter a qualidade e consistência do código.
+- **Prettier (v3.x)**: Formatador de código automático para padronização do estilo.
+- **Husky (v8.x)**: Para configurar Git Hooks e automatizar tarefas pré-commit/pré-push.
+- **Lint-staged (v15.x)**: Executa linters apenas em arquivos modificados.
+
+## Estrutura do Projeto
+
+A estrutura de pastas segue as convenções do Next.js, com uma organização modular para facilitar a navegação e manutenção:
 
 ```
-portfolio-jose-anderson/
-├── src/
-│   ├── app/
-│   │   ├── globals.css      # Estilos globais e tema
-│   │   ├── layout.tsx       # Layout principal e metadados
-│   │   └── page.tsx         # Página principal
-│   ├── components/
-│   │   ├── Header.tsx       # Cabeçalho e navegação
-│   │   ├── About.tsx        # Seção sobre mim
-│   │   ├── Skills.tsx       # Habilidades técnicas
-│   │   ├── Projects.tsx     # Projetos desenvolvidos
-│   │   ├── Experience.tsx   # Experiência e certificações
-│   │   ├── Contact.tsx      # Formulário de contato
-│   │   └── Footer.tsx       # Rodapé
-│   ├── data/
-│   │   └── portfolio.ts     # Dados do portfolio
-│   └── types/
-│       └── index.ts         # Definições TypeScript
-├── public/                  # Arquivos estáticos
-├── package.json            # Dependências do projeto
-└── README.md              # Este arquivo
+meu_cv/
+├── app/                  # Rotas e layouts principais da aplicação
+│   ├── api/              # Rotas de API (ex: formulário de contato)
+│   ├── globals.css       # Estilos globais
+│   └── layout.tsx        # Layout principal da aplicação
+│   └── page.tsx          # Página inicial
+├── components/           # Componentes reutilizáveis, organizados por funcionalidade
+│   ├── About/            # Seção Sobre
+│   ├── Certifications/   # Seção de Certificações
+│   ├── ContactForm/      # Formulário de Contato
+│   ├── Education/        # Seção de Educação
+│   ├── ExperienceTimeline/ # Linha do tempo de Experiência
+│   ├── Footer/           # Rodapé
+│   ├── HeroSection/      # Seção Hero (introdução)
+│   ├── Navbar/           # Barra de Navegação
+│   ├── Projects/         # Seção de Projetos
+│   ├── SkillsCloud/      # Nuvem de Habilidades
+│   └── TypewriterEffect/ # Efeito de digitação
+├── data/                 # Dados estáticos do currículo (ex: portfolio.ts)
+├── public/               # Ativos estáticos (imagens, ícones)
+├── .next/                # Diretório de build do Next.js
+├── node_modules/         # Dependências do projeto
+├── package.json          # Metadados e scripts do projeto
+├── tailwind.config.js    # Configuração do Tailwind CSS
+├── tsconfig.json         # Configuração do TypeScript
+└── ...                   # Outros arquivos de configuração (.gitignore, Dockerfile, etc.)
 ```
 
-## 🚀 Como Executar
+## Como Rodar o Projeto
+
+Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local:
 
 ### Pré-requisitos
 
-- Node.js 18+ instalado
-- npm ou yarn
+- Node.js (versão 18 ou superior) e npm (ou yarn/pnpm) instalados.
+- Git instalado.
 
 ### Instalação
 
-1. **Clone ou extraia o projeto**
+1. Clone o repositório:
    ```bash
-   cd portfolio-jose-anderson
+   git clone https://github.com/seu-usuario/meu_cv.git
+   cd meu_cv
    ```
 
-2. **Instale as dependências**
+2. Instale as dependências:
    ```bash
    npm install
+   # ou yarn install
+   # ou pnpm install
    ```
 
-3. **Execute o servidor de desenvolvimento**
-   ```bash
-   npm run dev
-   ```
+### Variáveis de Ambiente
 
-4. **Abra no navegador**
-   ```
-   http://localhost:3000
-   ```
+Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis para a funcionalidade de envio de e-mail:
 
-## 📝 Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria a versão de produção
-- `npm run start` - Inicia o servidor de produção
-- `npm run lint` - Executa o linter ESLint
-
-## 🎨 Personalização
-
-### Cores do Tema
-
-As cores principais estão definidas em `src/app/globals.css`:
-
-```css
-:root {
-  --accent-primary: #00d4ff;    /* Azul ciano vibrante */
-  --accent-secondary: #ff6b6b;  /* Coral alegre */
-  --accent-tertiary: #4ecdc4;   /* Verde-azulado */
-  --accent-quaternary: #ffe66d; /* Amarelo suave */
-}
+```env
+SMTP_HOST=seu-servidor-smtp
+SMTP_PORT=587 # ou a porta do seu servidor SMTP
+SMTP_USER=seu-email@exemplo.com
+SMTP_PASS=sua-senha-de-app
+SMTP_FROM=seu-email@exemplo.com # O email que aparecerá como remetente
+CONTACT_EMAIL=email-de-destino@exemplo.com # O email para onde as mensagens serão enviadas
 ```
 
-### Dados Pessoais
+**Nota**: Para `SMTP_PASS` em serviços como Gmail, você precisará gerar uma senha de aplicativo, não use sua senha principal.
 
-Para atualizar as informações pessoais, edite o arquivo `src/data/portfolio.ts`:
+### Executando o Servidor de Desenvolvimento
 
-- Informações de contato
-- Resumo profissional
-- Habilidades técnicas
-- Projetos
-- Experiência profissional
-- Certificações
+Para iniciar o servidor de desenvolvimento:
 
-### Componentes
+```bash
+npm run dev
+# ou yarn dev
+# ou pnpm dev
+```
 
-Cada seção do portfolio é um componente independente em `src/components/`, facilitando manutenção e customização.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação.
 
-## 📱 Responsividade
+### Build para Produção
 
-O portfolio foi desenvolvido com abordagem mobile-first e é totalmente responsivo:
+Para construir a aplicação para produção:
 
-- **Mobile**: 320px - 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: 1024px+
+```bash
+npm run build
+# ou yarn build
+# ou pnpm build
+```
 
-## 📧 Formulário de Contato
+Para iniciar a aplicação em modo de produção (após o build):
 
-O formulário utiliza a funcionalidade `mailto:` do navegador, abrindo automaticamente o cliente de email padrão com os dados preenchidos.
+```bash
+npm run start
+# ou yarn start
+# ou pnpm start
+```
 
-Para implementar envio via API/servidor, substitua a lógica em `src/components/Contact.tsx`.
+## Scripts Úteis
 
-## 🚀 Deploy
+- `npm run dev`: Inicia o servidor de desenvolvimento.
+- `npm run build`: Compila a aplicação para produção.
+- `npm run start`: Inicia a aplicação em modo de produção.
+- `npm run lint`: Executa o ESLint para verificar problemas de código.
+- `npm run lint:fix`: Executa o ESLint e tenta corrigir automaticamente os problemas.
+- `npm run format`: Formata o código usando Prettier.
+- `npm run format:check`: Verifica se o código está formatado corretamente.
+- `npm run type-check`: Verifica os tipos TypeScript.
 
-### Vercel (Recomendado)
+## Correções Futuras / Problemas Conhecidos
 
-1. Faça push do código para um repositório Git
-2. Conecte o repositório na [Vercel](https://vercel.com)
-3. O deploy será automático
+- **Botão de Tema Dark/Light**: O botão para alternar entre o tema claro e escuro atualmente não está funcionando como esperado. É necessário investigar e corrigir a funcionalidade para que a alternância de temas ocorra corretamente.
 
-### Netlify
+## Contribuição
 
-1. Execute `npm run build`
-2. Faça upload da pasta `out/` para o Netlify
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias, correções de bugs ou novas funcionalidades.
 
-### Outros Provedores
+## Licença
 
-1. Execute `npm run build`
-2. Faça upload dos arquivos gerados conforme documentação do provedor
-
-## 🔧 Configurações Avançadas
-
-### SEO
-
-Os metadados estão configurados em `src/app/layout.tsx`. Atualize conforme necessário:
-
-- Title e description
-- Open Graph tags
-- Twitter cards
-- Keywords
-
-### Performance
-
-O projeto já inclui otimizações:
-
-- Lazy loading de componentes
-- Otimização de imagens
-- Minificação automática
-- Tree shaking
-
-## 📞 Suporte
-
-Para dúvidas ou suporte:
-
-- **Email**: j.anderson.mect@gmail.com
-- **LinkedIn**: [José Anderson](https://linkedin.com/in/jose-anderson)
-- **GitHub**: [jose-anderson](https://github.com/jose-anderson)
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para uso pessoal de José Anderson da Silva Costa.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
-**Desenvolvido com ❤️ por José Anderson**
-
+**Autor:** José Anderson da Silva Costa
+**Data:** 14 de julho de 2025
+**Versão:** 1.0

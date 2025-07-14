@@ -1,33 +1,41 @@
 {
-  "name": "portfolio-jose-anderson",
+  "name": "meu_cv",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.22.0",
-    "next": "15.3.4",
-    "portfolio-jose-anderson": "file:",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-email": "^4.0.17",
-    "resend": "^4.6.0"
+    "@hookform/resolvers": "^5.1.1",
+    "@next/font": "^14.2.15",
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "framer-motion": "^12.23.3",
+    "lucide-react": "^0.525.0",
+    "next": "^14.2.30",
+    "next-seo": "^6.8.0",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.60.0",
+    "react-to-print": "^3.1.1",
+    "recharts": "^3.1.0",
+    "resend": "^4.6.0",
+    "tailwindcss": "^4.1.11",
+    "zod": "^4.0.5",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
+    "eslint-config-next": "15.3.5",
     "typescript": "^5"
   }
 }
