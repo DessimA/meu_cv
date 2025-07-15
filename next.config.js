@@ -5,6 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/meu_cv',
+  assetPrefix: './', // Adiciona assetPrefix para caminhos relativos
   /* config options here */
 };
 
