@@ -143,6 +143,14 @@ npm run start
 # ou pnpm start
 ```
 
+## Deploy Online
+
+Este projeto está publicado no GitHub Pages e pode ser acessado através do seguinte link:
+
+[https://joseanderson.github.io/meu_cv/](https://joseanderson.github.io/meu_cv/)
+
+
+
 ## Scripts Úteis
 
 - `npm run dev`: Inicia o servidor de desenvolvimento.
