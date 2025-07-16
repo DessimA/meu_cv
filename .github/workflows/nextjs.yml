@@ -34,6 +34,7 @@ jobs:
         run: npm run build
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEXT_PUBLIC_FORMSPREE_SECRET: ${{ secrets.NEXT_PUBLIC_FORMSPREE_SECRET }}
         
       - name: Configure Pages
         uses: actions/configure-pages@v5
