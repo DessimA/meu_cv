@@ -39,7 +39,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
     setSubmitStatus('idle')
 
     try {
-      const response = await fetch('YOUR_FORMSPREE_ENDPOINT', { // <-- Substitua por seu endpoint Formspree
+      const response = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_SECRET}`, { // <-- Substitua por seu endpoint Formspree
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto"
         >
-          <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_SECRET}`} method="POST" onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
