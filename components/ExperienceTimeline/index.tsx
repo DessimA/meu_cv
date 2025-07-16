@@ -25,7 +25,8 @@ const ExperienceTimeline = ({ id }: ExperienceTimelineProps) => {
           Experiência Profissional
         </motion.h2>
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-600 transform -translate-x-1/2"></div>
+          {/* Linha do tempo: posicionada à esquerda em telas pequenas, centralizada em telas maiores */}
+          <div className="absolute left-6 w-0.5 h-full bg-gray-300 dark:bg-gray-600 transform -translate-x-1/2 md:left-1/2 md:-translate-x-1/2"></div>
           {experience.map((exp, index) => (
             <motion.div
               key={index}
@@ -33,12 +34,19 @@ const ExperienceTimeline = ({ id }: ExperienceTimelineProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-              <div className="order-1 w-5/12"></div>
-              <div className="z-20 flex items-center order-1 bg-blue-600 shadow-xl w-12 h-12 rounded-full">
-                <Briefcase className="w-6 h-6 mx-auto text-white" />
+              // Layout responsivo: simples em mobile, alternado em desktop
+              className={`mb-8 flex items-start w-full md:items-center md:justify-between ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+            >
+              {/* Espaçador para layout de desktop (oculto em mobile) */}
+              <div className="hidden md:block w-5/12"></div>
+
+              {/* Ícone na linha do tempo */}
+              <div className="z-20 flex-shrink-0 flex items-center justify-center bg-blue-600 shadow-xl w-12 h-12 rounded-full">
+                <Briefcase className="w-6 h-6 text-white" />
               </div>
-              <div className="order-1 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
+
+              {/* Card de conteúdo */}
+              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-xl w-full ml-4 md:w-5/12 md:ml-0 px-6 py-4">
                 <h3 className="font-bold text-gray-900 dark:text-white text-xl">{exp.title}</h3>
                 <p className="text-sm font-medium text-gray-600 dark:text-gray-300">{exp.company} | {exp.location}</p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{exp.period}</p>
