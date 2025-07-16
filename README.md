@@ -105,7 +105,7 @@ Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáve
 
 ```env
 # Para o formulário de contato com Formspree (essencial para o deploy no GitHub Pages!)
-NEXT_PUBLIC_FORMSPREE_SECRET=xvgqoqaz # Substitua pelo seu ID do formulário Formspree!
+NEXT_PUBLIC_FORMSPREE_SECRET=IDFORMULARIO # Substitua pelo seu ID do formulário Formspree!
 
 # Para o serviço de e-mail Resend (se você for testar a API de contato localmente)
 RESEND_API_KEY=sua_chave_api_resend # Obtenha em resend.com
@@ -184,6 +184,6 @@ Este projeto está licenciado sob a licença MIT. Sinta-se à vontade para usar,
 
 ---
 
-**Autor:** José Anderson da Silva Costa (com uma ajudinha do seu amigo Gemini! 😉)
+**Autor:** José Anderson da Silva Costa
 **Data:** 15 de julho de 2025
 **Versão:** 1.1 (Agora com mais brilho e funcionalidade! ✨)
