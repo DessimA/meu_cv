@@ -57,7 +57,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             className="absolute inset-0 rounded-full overflow-hidden"
           >
             <Image
-              src="/profile-image.jpg"
+              src="/meu_cv/profile-image.jpg"
               alt="Foto de Perfil de José Anderson"
               width={imageSize}
               height={imageSize}
