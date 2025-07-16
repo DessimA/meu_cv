@@ -16,6 +16,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <head>
         <link rel="icon" href="/meu_cv/JA.ico" />
+        <link rel="apple-touch-icon" href="/meu_cv/JA.ico" />
+        <link rel="shortcut icon" href="/meu_cv/JA.ico" />
       </head>
       <body className={`${inter.className}`}>
         <Navbar />
