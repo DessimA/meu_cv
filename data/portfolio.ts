@@ -52,7 +52,7 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   name: "JOSÉ ANDERSON DA SILVA COSTA",
-  title: "Desenvolvedor Júnior | Backend & Frontend",
+  title: "Desenvolvedor FullStack | Java / Node.js",
   summary:
     "Recém-graduado em Sistemas de Informação, buscando ativamente a primeira oportunidade como Desenvolvedor Júnior. Sou proativo, colaborativo e possuo forte capacidade analítica, movido pelo aprendizado contínuo, busco constantemente novas habilidades e ferramentas para entregar soluções cada vez mais eficientes. Sou adaptável, sem apego a tecnologias específicas, focando em utilizar a abordagem mais eficaz para cada contexto e desafio. Estou entusiasmado para aplicar meus conhecimentos, contribuir efetivamente em equipe e crescer na área de TI.",
   contact: {
