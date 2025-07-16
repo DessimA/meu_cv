@@ -184,6 +184,6 @@ Este projeto está licenciado sob a licença MIT. Sinta-se à vontade para usar,
 
 ---
 
-**Autor:** José Anderson da Silva Costa (com uma ajudinha do seu amigo Gemini! 😉)
+**Autor:** José Anderson da Silva Costa
 **Data:** 15 de julho de 2025
 **Versão:** 1.1 (Agora com mais brilho e funcionalidade! ✨)
