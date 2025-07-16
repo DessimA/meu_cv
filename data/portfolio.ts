@@ -100,6 +100,11 @@ export const portfolioData: PortfolioData = {
     { name: "LaTeX", category: "Ferramentas" },
     { name: "Windows", category: "Sistemas Operacionais" },
     { name: "Linux", category: "Sistemas Operacionais" },
+    { name: "Next.js Static Export", category: "Cloud & DevOps" },
+    { name: "GitHub Pages Deployment", category: "Cloud & DevOps" },
+    { name: "Environment Variable Management", category: "Cloud & DevOps" },
+    { name: "Frontend Deployment Strategies", category: "Metodologias & Conceitos" },
+    { name: "Formspree Integration", category: "Frameworks & Bibliotecas" },
   ],
   projects: [
     {
