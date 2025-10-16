@@ -15,7 +15,7 @@ const Navbar = () => {
     { href: '#projects', label: 'Projetos' },
     { href: '#experience', label: 'Experiência' },
     { href: '#certifications', label: 'Certificações' },
-    { href: '#contact', label: 'Contato' },
+    //{ href: '#contact', label: 'Contato' },
   ]
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
