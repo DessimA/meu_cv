@@ -65,7 +65,7 @@ export const portfolioData: PortfolioData = {
     {
       degree: "Bacharelado em Sistemas de Informação",
       institution: "Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)",
-      details: "Concluído em 2025. Campus Cedro, Ceará.",
+      details: "Concluído em 2025. Ceará.",
     },
   ],
   skills: [
@@ -138,7 +138,7 @@ export const portfolioData: PortfolioData = {
       title: "Consultor de TI Autônomo",
       company: "Atuação Própria",
       period: "Jan 2020 - Ago 2024",
-      location: "Cedro, Ceará",
+      location: "Ceará, Brasil",
       responsibilities: [
         "Diagnóstico de gargalos e ineficiências em processos/sistemas via entrevistas, análise documental e observação.",
         "Elaboração de relatórios técnicos com propostas de ações corretivas, planos de ação e análise de custo-benefício.",
