@@ -150,7 +150,7 @@ export const portfolioData: PortfolioData = {
       title: "Atendente de Caixa / Atendimento ao Cliente",
       company: "Panificadora Pão e Trigo",
       period: "Jan 2012 - Jan 2013",
-      location: "Araruna, Paraíba",
+      location: "Paraíba, Brasil",
       responsibilities: ["Atendimento direto ao cliente, operação de caixa e processamento de transações."],
     },
   ],
