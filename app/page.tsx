@@ -8,7 +8,7 @@ import Projects from '@/components/Projects'
 import ExperienceTimeline from '@/components/ExperienceTimeline'
 import Education from '@/components/Education'
 import Certifications from '@/components/Certifications'
-import ContactForm from '@/components/ContactForm'
+//import ContactForm from '@/components/ContactForm'
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <ExperienceTimeline id="experience" />
       <Education id="education" />
       <Certifications id="certifications" />
-      <ContactForm id="contact" />
+      {/* <ContactForm id="contact" /> */}
     </>
   )
 }
