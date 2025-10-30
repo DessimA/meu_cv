@@ -10,14 +10,14 @@ interface SkillsCloudProps {
 }
 
 const categoryIcons: { [key: string]: React.ReactElement } = {
-  Linguagens: <Code className="w-6 h-6 mr-2" />,
-  'Frameworks & Bibliotecas': <Code className="w-6 h-6 mr-2" />,
-  'Banco de Dados': <Database className="w-6 h-6 mr-2" />,
-  'Cloud & DevOps': <Cloud className="w-6 h-6 mr-2" />,
-  'Metodologias & Conceitos': <GitMerge className="w-6 h-6 mr-2" />,
-  Ferramentas: <Settings className="w-6 h-6 mr-2" />,
-  'Sistemas Operacionais': <Wind className="w-6 h-6 mr-2" />,
-  Outros: <BrainCircuit className="w-6 h-6 mr-2" />,
+  Linguagens: <Code className="w-5 h-5 mr-2 text-blue-500" />,
+  'Frameworks & Bibliotecas': <Code className="w-5 h-5 mr-2 text-green-500" />,
+  'Banco de Dados': <Database className="w-5 h-5 mr-2 text-yellow-500" />,
+  'Cloud & DevOps': <Cloud className="w-5 h-5 mr-2 text-purple-500" />,
+  'Metodologias & Conceitos': <GitMerge className="w-5 h-5 mr-2 text-red-500" />,
+  Ferramentas: <Settings className="w-5 h-5 mr-2 text-indigo-500" />,
+  'Sistemas Operacionais': <Wind className="w-5 h-5 mr-2 text-teal-500" />,
+  Outros: <BrainCircuit className="w-5 h-5 mr-2 text-pink-500" />,
 }
 
 const SkillsCloud = ({ id }: SkillsCloudProps) => {
@@ -33,34 +33,38 @@ const SkillsCloud = ({ id }: SkillsCloudProps) => {
   }, {} as { [key: string]: typeof skills })
 
   return (
-    <section id={id} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section id={id} className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-3xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-10 relative inline-block"
         >
-          Habilidades
+          Minhas Habilidades
+          <span className="absolute bottom-0 left-1/2 w-32 h-1 bg-blue-500 transform -translate-x-1/2"></span>
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {Object.entries(groupedSkills).map(([category, skills], index) => (
             <motion.div
               key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 md:p-7 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 ease-in-out"
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                 {categoryIcons[category]}
                 {category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <span key={skill.name} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+                  <span
+                    key={skill.name}
+                    className="bg-blue-500/10 dark:bg-blue-300/10 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full backdrop-blur-sm shadow-md"
+                  >
                     {skill.name}
                   </span>
                 ))}

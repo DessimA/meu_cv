@@ -6,7 +6,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'neon-blue': 'rgba(0, 100, 255, 0.8)',
+        'neon-gray': 'rgba(150, 150, 150, 0.8)',
+        'neon-black': 'rgba(0, 0, 0, 0.8)',
+      },
+    },
   },
   plugins: [],
 }

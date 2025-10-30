@@ -12,32 +12,26 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ id }: HeroSectionProps) => {
-  const { name, title, contact } = portfolioData
+  const { name, title, contact } = portfolioData;
 
   const socialLinks = [
-    { icon: <Github size={24} />, href: contact.github, label: 'GitHub' },
-    { icon: <Linkedin size={24} />, href: contact.linkedin, label: 'LinkedIn' },
-    { icon: <Mail size={24} />, href: `mailto:${contact.email}`, label: 'Email' },
-  ]
+    { icon: <Github size={20} />, href: contact.github, label: 'GitHub' },
+    { icon: <Linkedin size={20} />, href: contact.linkedin, label: 'LinkedIn' },
+    { icon: <Mail size={20} />, href: `mailto:${contact.email}`, label: 'Email' },
+  ];
 
-  // Cores para o neon em tons mais escuros de azul, cinza e preto
-  const neonColors = {
-    blue: 'rgba(0, 100, 255, 0.8)', // Azul mais forte
-    gray: 'rgba(150, 150, 150, 0.8)', // Cinza mais forte
-    black: 'rgba(0, 0, 0, 0.8)', // Preto mais forte
-  }
-
-  const imageSize = 200; // Tamanho da imagem
+  const imageSize = 160; // Tamanho da imagem para mobile
+  const desktopImageSize = 200; // Tamanho da imagem para desktop
 
   return (
-    <section id={id} className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8">
+    <section id={id} className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-50 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center md:space-x-12">
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
           whileHover={{ scale: 1.05 }}
-          className="mb-8 md:mb-0 flex-shrink-0 relative rounded-full overflow-hidden"
+          className="mb-6 md:mb-0 flex-shrink-0 relative rounded-full overflow-hidden"
           style={{ width: imageSize, height: imageSize }}
         >
           {/* Contêiner da imagem com animação de flutuação e brilho neon */}
@@ -45,9 +39,9 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             animate={{
               y: [0, -10, 0], // Animação de flutuação
               boxShadow: [ // Animação do brilho neon
-                `0 0 10px ${neonColors.blue}, 0 0 20px ${neonColors.gray}, 0 0 40px ${neonColors.black}`,
-                `0 0 20px ${neonColors.blue}, 0 0 40px ${neonColors.gray}, 0 0 80px ${neonColors.black}`,
-                `0 0 10px ${neonColors.blue}, 0 0 20px ${neonColors.gray}, 0 0 40px ${neonColors.black}`,
+                `0 0 8px theme('colors.neon-blue'), 0 0 12px theme('colors.neon-gray')`,
+                `0 0 12px theme('colors.neon-blue'), 0 0 18px theme('colors.neon-gray')`,
+                `0 0 8px theme('colors.neon-blue'), 0 0 12px theme('colors.neon-gray')`,
               ],
               transition: {
                 y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
@@ -59,9 +53,9 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             <Image
               src="/meu_cv/profile-image.jpg"
               alt="Foto de Perfil de José Anderson"
-              width={imageSize}
-              height={imageSize}
-              className="object-cover rounded-full"
+              width={desktopImageSize} // Use desktop size for Image component, CSS will handle actual display size
+              height={desktopImageSize}
+              className="object-cover rounded-full w-full h-full"
               priority
             />
           </motion.div>
@@ -72,16 +66,16 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2 md:mb-4"
           >
-            <TypewriterEffect text={name} />
+            {name}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8"
+            className="text-base md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8"
           >
             <TypewriterEffect text={title} delay={name.length * 0.05 + 0.5} />
           </motion.p>
@@ -90,7 +84,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex justify-center md:justify-start space-x-6"
+            className="flex justify-center md:justify-start space-x-4 md:space-x-6"
           >
             {socialLinks.map((link, index) => (
               <motion.a
@@ -110,7 +104,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

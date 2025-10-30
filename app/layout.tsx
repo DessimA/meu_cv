@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ThemeScript from '@/components/ThemeScript'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="shortcut icon" href="/meu_cv/JA.ico" />
       </head>
       <body className={`${inter.className}`}>
+        <ThemeScript />
         <Navbar />
         <main>{children}</main>
         <Footer />
