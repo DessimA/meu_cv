@@ -1,4 +1,3 @@
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -24,7 +23,8 @@ const Education = ({ id }: EducationProps) => {
         >
           Formação Acadêmica
         </motion.h2>
-        <div className="max-w-2xl mx-auto">
+                
+        <div className="max-w-2xl mx-auto space-y-6"> 
           {education.map((edu, index) => (
             <motion.div
               key={index}
