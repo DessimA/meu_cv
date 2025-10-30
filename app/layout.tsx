@@ -8,8 +8,8 @@ import ThemeScript from '@/components/ThemeScript'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'José Anderson - Currículo',
-  description: 'Currículo de José Anderson, Desenvolvedor Web Full-Stack.',
+  title: 'J.A.S.C - Portifólio',
+  description: 'Portifólio de José Anderson, Desenvolvedor Web Full-Stack.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
