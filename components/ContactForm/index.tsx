@@ -70,7 +70,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-3xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-10 relative inline-block"
+          className="text-3xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-10 relative"
         >
           Entre em Contato
           <span className="absolute bottom-0 left-1/2 w-32 md:w-40 h-1 bg-blue-500 transform -translate-x-1/2"></span>
