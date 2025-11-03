@@ -1,189 +1,169 @@
-# Meu Currículo Web: Onde a Magia Acontece! ✨
+<div align="center">
+  <a href="https://meu-cv-inky.vercel.app/" target="_blank">
+    <img src="./public/profile-image.jpg" alt="Foto de Perfil" width="150" style="border-radius: 50%;">
+  </a>
+  <h1>José Anderson</h1>
+  <p>Desenvolvedor de Software</p>
+</div>
 
-Bem-vindo(a) ao meu cantinho digital! Este não é apenas um currículo, é uma experiência interativa, construída com carinho e muita tecnologia para mostrar minhas habilidades e paixões. Prepare-se para uma jornada de descoberta! 🚀
+---
 
-## Visão Geral do Projeto: Mais que um CV, uma Aventura! 🗺️
+## 🎯 Sobre o Projeto
 
-Meu objetivo principal com este projeto é ir além do papel e apresentar minhas informações profissionais de um jeito dinâmico, conciso e, claro, visualmente deslumbrante! ✨ Tudo aqui foi pensado para:
+<p align="justify">
+Este projeto é um currículo web interativo e dinâmico, projetado para apresentar minhas habilidades profissionais, experiências e projetos em um formato moderno e visualmente atraente. Foi construído com foco em performance, responsividade e acessibilidade, proporcionando uma experiência de usuário otimizada em todos os dispositivos.
+</p>
 
--   **Performance Otimizada**: Carregamento tão rápido que você vai piscar e já estará lá! ⚡️
--   **Design Responsivo**: Perfeito para qualquer tela, do seu smartphone 📱 ao seu monitor gigante 🖥️. Adaptação é meu sobrenome!
--   **SEO Otimizado**: Para que os robôs do Google me amem e me encontrem facilmente! 🤖❤️
--   **Acessibilidade**: Porque a inclusão é a chave! 🔑 Conteúdo acessível para todos, sem exceção.
--   **Manutenibilidade**: Código limpo, modular e organizado. Tão fácil de manter que parece mágica! 🪄
+<details>
+  <summary>Principais Funcionalidades</summary>
+  
+  - **Performance Otimizada**: Tempos de carregamento rápidos graças à renderização do lado do servidor e geração estática do Next.js.
+  - **Design Responsivo**: Uma interface totalmente responsiva que se adapta a qualquer tamanho de tela, do celular ao desktop.
+  - **Otimizado para SEO**: Estruturado para ser facilmente descoberto por motores de busca.
+  - **Acessibilidade**: Construído com as melhores práticas de acessibilidade para garantir que seja utilizável por todos.
+  - **Manutenibilidade**: Um código limpo, modular e bem organizado para fácil manutenção e futuras atualizações.
+</details>
 
-## Tecnologias Utilizadas: A Caixa de Ferramentas do Mago! 🧙‍♂️
+---
 
-Este projeto é um caldeirão de tecnologias modernas, misturadas com maestria para garantir robustez, escalabilidade e uma experiência de desenvolvimento de outro mundo! 🌌
+## 🛠️ Tecnologias Utilizadas
 
-### Core Frameworks: O Coração da Besta! ❤️‍🔥
+Este projeto utiliza uma stack de tecnologias moderna para garantir robustez, escalabilidade e uma experiência de desenvolvimento de alta qualidade.
 
--   **Next.js (v14.x)**: O super-herói do React para renderização server-side, geração estática e roteamento. Voa alto! 🦸‍♂️
--   **React (v18.x)**: A biblioteca JavaScript que me permite construir interfaces de usuário com a agilidade de um ninja! 🥋
--   **TypeScript (v5.x)**: O guardião dos tipos, garantindo que meu código seja robusto e livre de surpresas indesejadas. 🛡️
+<details>
+  <summary>Core Frameworks</summary>
+  
+  - **Next.js (v14.x)**: Um framework React para renderização do lado do servidor, geração de sites estáticos e roteamento.
+  - **React (v18.x)**: Uma biblioteca JavaScript para construir interfaces de usuário.
+  - **TypeScript (v5.x)**: Um superset tipado de JavaScript que melhora a qualidade e a robustez do código.
+</details>
 
-### Estilização e Design: A Beleza em Cada Pixel! 🎨
+<details>
+  <summary>Estilização e Design</summary>
+  
+  - **Tailwind CSS (v3.x)**: Um framework CSS utility-first para criar interfaces responsivas e elegantes.
+  - **Framer Motion (v10.x)**: Uma biblioteca para criar animações fluidas e interativas.
+  - **Lucide React (v0.300.x)**: Uma biblioteca de ícones limpos e profissionais.
+</details>
 
--   **Tailwind CSS (v3.x)**: Meu pincel mágico para criar interfaces responsivas e estilosas em um piscar de olhos! 🖌️
--   **Framer Motion (v10.x)**: Para dar vida ao meu CV com animações fluidas e interativas. Prepare-se para o show! 🎬
--   **Lucide React (v0.300.x)**: Ícones que brilham e dão um toque profissional a cada detalhe. ✨
+<details>
+  <summary>Funcionalidade e Interação</summary>
+  
+  - **React Hook Form (v7.x)**: Uma biblioteca para gerenciar formulários com validação eficiente.
+  - **Zod (v3.x)**: Uma biblioteca de validação de esquemas que garante a integridade dos dados.
+  - **Resend**: Utilizado para o envio de e-mails no formulário de contato.
+</details>
 
-### Funcionalidades e Interação: A Inteligência por Trás da Cena! 🧠
+<details>
+  <summary>Ferramentas de Desenvolvimento e Qualidade</summary>
+  
+  - **ESLint (v8.x)**: Uma ferramenta para identificar e corrigir problemas no código.
+  - **Prettier (v3.x)**: Um formatador de código que garante um estilo consistente e legível.
+</details>
 
--   **React Hook Form (v7.x)**: Gerenciamento de formulários com validação tão eficiente que você vai querer preencher mais! 📝
--   **Zod (v3.x)**: O validador de esquemas que garante que os dados estejam sempre no ponto. 🎯
--   **Formspree**: Para o formulário de contato funcionar como um encanto em sites estáticos como o GitHub Pages! 📧 (Adeus, problemas de backend! 👋)
--   **Resend**: Para o envio de e-mails, caso eu decida ter uma API Route em um ambiente com servidor. 💌
+---
 
-### Ferramentas de Desenvolvimento e Qualidade: Os Guardiões do Código! 🛠️
+## 🌊 Fluxo da Aplicação
 
--   **ESLint (v8.x)**: Meu detetive particular para encontrar e corrigir problemas no código. 🕵️‍♂️
--   **Prettier (v3.x)**: O organizador que deixa meu código sempre impecável e legível. 🧹
--   **Husky (v8.x)**: Meus cães de guarda do Git, garantindo que só o código de qualidade seja commitado. 🐶
--   **Lint-staged (v15.x)**: Para que os guardiões trabalhem apenas nos arquivos que realmente importam. 🚀
+O diagrama abaixo ilustra o fluxo geral da aplicação, desde a primeira visita do usuário até a renderização das diferentes seções do currículo.
 
-## Estrutura do Projeto: O Mapa do Tesouro! 🗺️
-
-A organização é a chave para a sanidade! Minha estrutura de pastas segue as convenções do Next.js, com um toque de modularidade para facilitar a navegação e manutenção.
-
+```mermaid
+graph TD
+    A[Usuário visita o site] --> B{Servidor Next.js};
+    B --> C[Serve a página principal (app/page.tsx)];
+    C --> D[Renderiza o layout principal (app/layout.tsx)];
+    D --> E{Renderiza os componentes};
+    E --> F[Navbar];
+    E --> G[HeroSection];
+    E --> H[Sobre];
+    E --> I[Linha do Tempo de Experiência];
+    E --> J[Projetos];
+    E --> K[Nuvem de Habilidades];
+    E --> L[Certificações];
+    E --> M[Educação];
+    E --> N[Formulário de Contato];
+    E --> O[Rodapé];
 ```
-meu_cv/
-├── app/                  # Rotas e layouts principais da aplicação (o coração do App Router!) ❤️
-│   ├── api/              # Rotas de API (se eu precisar de um backend, ele estará aqui!) 🤫
-│   ├── globals.css       # Estilos globais que dão o tom! 🌈
-│   └── layout.tsx        # O esqueleto da minha aplicação. 🦴
-│   └── page.tsx          # A página inicial, onde tudo começa! 🚀
-├── components/           # Meus blocos de construção reutilizáveis, organizados por funcionalidade. 🧱
-│   ├── About/            # Quem sou eu? Descubra aqui! 🙋‍♂️
-│   ├── Certifications/   # Meus troféus e conquistas! 🏆
-│   ├── ContactForm/      # Quer falar comigo? O portal está aqui! ✉️
-│   ├── Education/        # Minha jornada de aprendizado. 🎓
-│   ├── ExperienceTimeline/ # Minhas aventuras profissionais em uma linha do tempo! ⏳
-│   ├── Footer/           # O rodapé que encerra com chave de ouro. 🌟
-│   ├── HeroSection/      # A primeira impressão é a que fica! ✨
-│   ├── Navbar/           # Sua bússola para navegar pelo meu mundo. 🧭
-│   ├── Projects/         # Meus bebês de código! Veja o que eu construí. 💻
-│   ├── SkillsCloud/      # Minhas habilidades em uma nuvem de conhecimento. ☁️
-│   └── TypewriterEffect/ # Um toque de drama e estilo! ✍️
-├── data/                 # Onde meus dados ganham vida! 📊
-├── public/               # Onde as imagens e ícones vivem felizes para sempre. 🖼️
-├── .next/                # Onde o Next.js faz sua mágica de build. 🎩
-├── node_modules/         # Onde todas as dependências se reúnem para a festa. 🎉
-├── package.json          # O RG do meu projeto. 🆔
-├── tailwind.config.js    # A receita secreta do meu estilo. 💅
-├── tsconfig.json         # As regras do jogo para o TypeScript. 📜
-└── ...                   # Outros arquivos de configuração (meus pequenos segredos). 🤫
-```
 
-## Como Rodar o Projeto: Desvendando o Mistério! 🕵️‍♀️
+---
 
-Quer ver essa maravilha em ação no seu computador? Siga os passos e prepare-se para a diversão!
+## 🚀 Começando
 
-### Pré-requisitos: O Kit Básico do Aventureiro! 🎒
+Para executar este projeto localmente, siga os passos abaixo.
 
--   Node.js (versão 18 ou superior) e npm (ou yarn/pnpm) instalados.
--   Git instalado.
+### Pré-requisitos
 
-### Instalação: Montando o Quebra-Cabeça! 🧩
+- Node.js (v18 ou superior) e npm (ou yarn/pnpm) instalados.
+- Git instalado.
 
-1.  Clone o repositório (o primeiro passo para a grandeza!):
+### Instalação
+
+1.  Clone o repositório:
     ```bash
     git clone https://github.com/DessimA/meu_cv.git
     cd meu_cv
     ```
 
-2.  Instale as dependências (a mágica acontece aqui!):
+2.  Instale as dependências:
     ```bash
     npm install
-    # ou yarn install
-    # ou pnpm install
     ```
 
-### Variáveis de Ambiente: Os Segredos do Sucesso! 🤫
+### Variáveis de Ambiente
 
-Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis. Elas são cruciais para o formulário de contato e, se você for testar a API de e-mail localmente, para o Resend.
+Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis. Elas são necessárias para que o formulário de contato funcione corretamente.
 
 ```env
-# Para o formulário de contato com Formspree (essencial para o deploy no GitHub Pages!)
-NEXT_PUBLIC_FORMSPREE_SECRET=IDFORMULARIO # Substitua pelo seu ID do formulário Formspree!
-
-# Para o serviço de e-mail Resend (se você for testar a API de contato localmente)
-RESEND_API_KEY=sua_chave_api_resend # Obtenha em resend.com
-RESEND_FROM_EMAIL=onboarding@resend.dev # Seu email verificado no Resend
-CONTACT_EMAIL=seu_email_de_destino@exemplo.com # Para onde as mensagens do formulário irão
+# Para o serviço de e-mail Resend
+RESEND_API_KEY=sua_chave_api_resend
+RESEND_FROM_EMAIL=onboarding@resend.dev
+CONTACT_EMAIL=seu_email_de_destino@exemplo.com
 ```
 
-### Executando o Servidor de Desenvolvimento: A Luz se Acende! 💡
+### Executando o Servidor de Desenvolvimento
 
-Para iniciar o servidor de desenvolvimento e ver a mágica acontecer:
+Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 ```bash
 npm run dev
-# ou yarn dev
-# ou pnpm dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) no seu navegador e prepare-se para se impressionar! 🤩
+Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver o resultado.
 
-### Build para Produção: Preparando para a Grande Estreia! 🌟
+### Fluxo de Execução Local
 
-Para construir a aplicação para o mundo real:
+O diagrama abaixo ilustra o processo de execução do projeto localmente.
 
-```bash
-npm run build
-# ou yarn build
-# ou pnpm build
+```mermaid
+graph TD
+    A[Início] --> B{Clonar repositório};
+    B --> C{Instalar dependências};
+    C --> D{Configurar variáveis de ambiente};
+    D --> E{Executar servidor de desenvolvimento};
+    E --> F[Acessar http://localhost:3000];
+    F --> G[Fim];
 ```
-
-Para iniciar a aplicação em modo de produção (após o build):
-
-```bash
-npm run start
-# ou yarn start
-# ou pnpm start
-```
-
-## Deploy Online: Voando Alto com Vercel! 🚀
-
-Este projeto está pronto para conquistar o mundo através da Vercel! Acesse e veja a mágica acontecer:
-
-[Clique Aqui](https://meu-cv-inky.vercel.app/)
-
-Para fazer o deploy, basta executar o comando mágico:
-
-```bash
-npm run deploy
-```
-
-Ele fará todo o trabalho pesado para você, construindo o projeto e enviando-o para a branch `gh-pages` do seu repositório! ✨
-
-## Scripts Úteis: Seus Companheiros de Aventura! 🤝
-
--   `npm run dev`: Inicia o servidor de desenvolvimento. 🏃‍♂️
--   `npm run build`: Compila a aplicação para produção. 🏗️
--   `npm run start`: Inicia a aplicação em modo de produção. ▶️
--   `npm run lint`: Executa o ESLint para verificar problemas de código. 🧐
--   `npm run lint:fix`: Executa o ESLint e tenta corrigir automaticamente os problemas. 🩹
--   `npm run format`: Formata o código usando Prettier. 💅
--   `npm run format:check`: Verifica se o código está formatado corretamente. ✅
--   `npm run type-check`: Verifica os tipos TypeScript. 🔍
--   `npm run predeploy`: Prepara o projeto para o deploy (executado automaticamente antes do `deploy`). 📦
--   `npm run deploy`: Faz o deploy da aplicação para o GitHub Pages. 🚀
-
-## Correções Futuras / Problemas Conhecidos: A Jornada Continua! 🚧
-
--   **Botão de Tema Dark/Light**: O botão para alternar entre o tema claro e escuro atualmente está um pouco tímido e não está funcionando como esperado. 🌗 Precisa de um empurrãozinho para brilhar! ✨
-
-## Contribuição: Junte-se à Equipe! 🤝
-
-Contribuições são mais que bem-vindas! Se você tem uma ideia brilhante, encontrou um bug chato ou quer adicionar uma funcionalidade incrível, sinta-se à vontade para abrir issues ou pull requests. Vamos construir algo épico juntos! 💖
-
-## Licença: Compartilhando a Magia! 📜
-
-Este projeto está licenciado sob a licença MIT. Sinta-se à vontade para usar, modificar e compartilhar! Veja o arquivo `LICENSE` para mais detalhes.
 
 ---
 
-**Autor:** José Anderson da Silva Costa
-**Data:** 15 de julho de 2025
-**Versão:** 1.1 (Agora com mais brilho e funcionalidade! ✨)
+## 🌐 Deploy
+
+Este projeto está implantado na Vercel. Você pode acessar a versão ao vivo aqui:
+
+<div align="center">
+  <a href="https://meu-cv-inky.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Ver%20Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Deploy na Vercel">
+  </a>
+</div>
+
+---
+
+## 📞 Contato
+
+Se você quiser entrar em contato, pode me encontrar na minha página de contatos:
+
+<div align="center">
+  <a href="https://meus-links-olive.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Entrar%20em%20Contato-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Contato">
+  </a>
+</div>
