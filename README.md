@@ -1,13 +1,3 @@
-<div align="center">
-  <a href="https://meu-cv-inky.vercel.app/" target="_blank">
-    <img src="./public/profile-image.jpg" alt="Foto de Perfil" width="150" style="border-radius: 50%;">
-  </a>
-  <h1>José Anderson</h1>
-  <p>Desenvolvedor de Software</p>
-</div>
-
----
-
 ## 🎯 Sobre o Projeto
 
 <p align="justify">
