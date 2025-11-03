@@ -16,9 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/meu_cv/JA.ico" />
-        <link rel="apple-touch-icon" href="/meu_cv/JA.ico" />
-        <link rel="shortcut icon" href="/meu_cv/JA.ico" />
+        <link rel="icon" href="/JA.ico" />
+        <link rel="apple-touch-icon" href="/JA.ico" />
+        <link rel="shortcut icon" href="/JA.ico" />
       </head>
       <body className={`${inter.className}`}>
         <ThemeScript />
