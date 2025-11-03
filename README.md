@@ -143,7 +143,7 @@ npm run start
 # ou pnpm start
 ```
 
-## Deploy Online: Voando Alto com GitHub Pages! 🚀
+## Deploy Online: Voando Alto com Vercel! 🚀
 
 Este projeto está pronto para conquistar o mundo através da Vercel! Acesse e veja a mágica acontecer:
 
