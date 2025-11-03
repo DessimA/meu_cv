@@ -1,7 +1,9 @@
 ## 🎯 Sobre o Projeto
 
 <p align="justify">
-Este projeto é um currículo web interativo e dinâmico, projetado para apresentar minhas habilidades profissionais, experiências e projetos em um formato moderno e visualmente atraente. Foi construído com foco em performance, responsividade e acessibilidade, proporcionando uma experiência de usuário otimizada em todos os dispositivos.
+Este projeto é um currículo web interativo e dinâmico, projetado para apresentar minhas habilidades profissionais, experiências e projetos em um formato moderno e visualmente atraente. 
+
+Foi construído com foco em performance, responsividade e acessibilidade, proporcionando uma experiência de usuário otimizada em todos os dispositivos.
 </p>
 
 <details>
