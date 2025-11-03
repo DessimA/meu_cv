@@ -51,7 +51,7 @@ const HeroSection = ({ id }: HeroSectionProps) => {
             className="absolute inset-0 rounded-full overflow-hidden"
           >
             <Image
-              src="/meu_cv/profile-image.jpg"
+              src="/profile-image.jpg"
               alt="Foto de Perfil de José Anderson"
               width={desktopImageSize} // Use desktop size for Image component, CSS will handle actual display size
               height={desktopImageSize}
