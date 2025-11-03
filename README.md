@@ -70,8 +70,8 @@ O diagrama abaixo ilustra o fluxo geral da aplicação, desde a primeira visita 
 ```mermaid
 graph TD
     A[Usuário visita o site] --> B{Servidor Next.js};
-    B --> C[Serve a página principal (app/page.tsx)];
-    C --> D[Renderiza o layout principal (app/layout.tsx)];
+    B --> C[Serve a página principal (app.page.tsx)];
+    C --> D[Renderiza o layout principal (app.layout.tsx)];
     D --> E{Renderiza os componentes};
     E --> F[Navbar];
     E --> G[HeroSection];
@@ -140,7 +140,7 @@ graph TD
     B --> C{Instalar dependências};
     C --> D{Configurar variáveis de ambiente};
     D --> E{Executar servidor de desenvolvimento};
-    E --> F[Acessar http://localhost:3000];
+    E --> F[Acessar localhost:3000];
     F --> G[Fim];
 ```
 
