@@ -145,9 +145,9 @@ npm run start
 
 ## Deploy Online: Voando Alto com GitHub Pages! 🚀
 
-Este projeto está pronto para conquistar o mundo através do GitHub Pages! Acesse e veja a mágica acontecer:
+Este projeto está pronto para conquistar o mundo através da Vercel! Acesse e veja a mágica acontecer:
 
-[https://dessima.github.io/meu_cv/](https://dessima.github.io/meu_cv/)
+[Clique Aqui](https://meu-cv-inky.vercel.app/)
 
 Para fazer o deploy, basta executar o comando mágico:
 
