@@ -1,14 +1,13 @@
-const isProd = process.env.NODE_ENV === 'production';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Remove estas linhas se existirem:
+  // basePath: '/meu_cv',
+  // assetPrefix: '/meu_cv',
+  // output: 'export',
+  
   images: {
-    unoptimized: true,
+    unoptimized: false, // Na Vercel pode usar otimização de imagens
   },
-  basePath: isProd ? '/meu_cv' : '',
-  assetPrefix: isProd ? '/meu_cv/' : '',
-  /* config options here */
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
