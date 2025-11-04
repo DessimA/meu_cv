@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -32,19 +32,10 @@ const ContactForm = ({ id }: ContactFormProps) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
-    watch
+    reset
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema)
   });
-
-  const watchedFields = watch();
-
-  useEffect(() => {
-    if (submitStatus !== 'idle') {
-      setSubmitStatus('idle');
-    }
-  }, [watchedFields]);
 
   const onSubmit = async (data: ContactFormData) => {
     if (!turnstileToken) {
@@ -54,8 +45,8 @@ const ContactForm = ({ id }: ContactFormProps) => {
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setErrorMessage('');
+    setSubmitStatus('idle'); // Reset status at the beginning of a new submission
+    setErrorMessage(''); // Clear previous error message
 
     try {
       const response = await fetch('/api/contact', {
@@ -71,15 +62,17 @@ const ContactForm = ({ id }: ContactFormProps) => {
 
       const result = await response.json();
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        reset();
-        setTurnstileToken('');
-        if (turnstileRef.current) {
-          turnstileRef.current.reset();
-        }
-      } else {
-        setSubmitStatus('error');
+              if (response.ok) {
+                setSubmitStatus('success');
+                reset();
+                setTurnstileToken('');
+                if (turnstileRef.current) {
+                  turnstileRef.current.reset();
+                }
+                setTimeout(() => {
+                  setSubmitStatus('idle');
+                }, 5000); // Clear success message after 5 seconds
+              } else {        setSubmitStatus('error');
         setErrorMessage(result.error || 'Erro ao enviar mensagem. Tente novamente.');
       }
     } catch (error) {
