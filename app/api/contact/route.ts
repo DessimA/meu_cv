@@ -54,14 +54,18 @@ function validateEmailDomain(email: string): { valid: boolean; reason?: string }
     return { valid: false, reason: 'Emails temporários não são aceitos' };
   }
 
-  // Aceitar domínios legítimos conhecidos
-  if (LEGITIMATE_DOMAINS.includes(domain)) {
-    return { valid: true };
-  }
+  // Verificar se o domínio está na lista de domínios legítimos ou corresponde a um padrão
+  const isLegitimate = LEGITIMATE_DOMAINS.some(legitDomain => {
+    if (legitDomain.startsWith('*.')) {
+      // Trata o caso de subdomínios, como '*.edu.br'
+      const baseDomain = legitDomain.substring(2);
+      return domain.endsWith(baseDomain);
+    } else {
+      return domain === legitDomain;
+    }
+  });
 
-  // Para domínios corporativos, aceitar qualquer um
-  // (empresas podem ter domínios próprios)
-  if (!domain.includes('temp') && !domain.includes('fake') && !domain.includes('trash')) {
+  if (isLegitimate) {
     return { valid: true };
   }
 
