@@ -1,12 +1,12 @@
-
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle, Loader } from 'lucide-react'
+import { Turnstile } from '@marsidev/react-turnstile'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
@@ -24,6 +24,9 @@ interface ContactFormProps {
 const ContactForm = ({ id }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [turnstileToken, setTurnstileToken] = useState<string>('');
+  const turnstileRef = useRef<any>(null);
 
   const {
     register,
@@ -35,30 +38,50 @@ const ContactForm = ({ id }: ContactFormProps) => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    // Verificar se o Turnstile foi completado
+    if (!turnstileToken) {
+      setErrorMessage('Por favor, complete a verificação de segurança.');
+      setSubmitStatus('error');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrorMessage('');
 
     try {
-      const response = await fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_SECRET}`, { // <-- Substitua por seu endpoint Formspree
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+          ...data,
+          'cf-turnstile-response': turnstileToken
+        })
       });
+
+      const result = await response.json();
 
       if (response.ok) {
         setSubmitStatus('success');
         reset();
+        setTurnstileToken('');
+        // Resetar o Turnstile widget
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
       } else {
         setSubmitStatus('error');
+        setErrorMessage(result.error || 'Erro ao enviar mensagem. Tente novamente.');
       }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage('Erro de conexão. Verifique sua internet e tente novamente.');
     } finally {
-      // Ensure isSubmitting is reset after a short delay, regardless of success or error
       setTimeout(() => {
         setIsSubmitting(false);
-      }, 1000); // Re-enable button after 1 second
+      }, 1000);
     }
   };
 
@@ -137,7 +160,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
               <textarea
                 {...register('message')}
                 id="message"
-                rows={4} // Reduced rows for mobile
+                rows={4}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-sm"
               />
               {errors.message && (
@@ -145,9 +168,27 @@ const ContactForm = ({ id }: ContactFormProps) => {
               )}
             </div>
 
+            {/* Turnstile CAPTCHA */}
+            <div className="flex justify-center">
+              <Turnstile
+                ref={turnstileRef}
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+                onSuccess={(token) => setTurnstileToken(token)}
+                onError={() => {
+                  setTurnstileToken('');
+                  setErrorMessage('Erro na verificação de segurança. Tente novamente.');
+                }}
+                onExpire={() => setTurnstileToken('')}
+                options={{
+                  theme: 'auto',
+                  size: 'normal'
+                }}
+              />
+            </div>
+
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !turnstileToken}
               className="w-full bg-blue-600 text-white py-2.5 px-5 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 transition-colors shadow-md text-base"
             >
               {isSubmitting ? (
@@ -178,7 +219,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
                 className="flex items-center space-x-2 text-red-600 bg-red-50 dark:bg-red-900/20 p-2 md:p-3 rounded-md mt-3 md:mt-4 text-sm"
               >
                 <AlertCircle size={18} />
-                <span>Erro ao enviar mensagem. Tente novamente.</span>
+                <span>{errorMessage || 'Erro ao enviar mensagem. Tente novamente.'}</span>
               </motion.div>
             )}
           </form>
