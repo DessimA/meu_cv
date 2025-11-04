@@ -1,6 +1,6 @@
-// app/api/contact/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { OFFENSIVE_WORDS, LEGITIMATE_DOMAINS, DISPOSABLE_DOMAINS } from '@/data/validationSets';
 
 // Schema de validação
 const contactSchema = z.object({
@@ -10,28 +10,6 @@ const contactSchema = z.object({
   message: z.string().min(10, 'Mensagem deve ter pelo menos 10 caracteres'),
   'cf-turnstile-response': z.string().min(1, 'Captcha é obrigatório')
 });
-
-// Lista de palavras ofensivas (expandível)
-const OFFENSIVE_WORDS = [
-  'arrombado', 'fdp', 'porra', 'caralho', 'merda', 'bosta',
-  'desgraça', 'vagabundo', 'safado', 'idiota', 'imbecil',
-  'otário', 'babaca', 'cretino', 'burro', 'estúpido',
-  'vai se foder', 'vtnc', 'vsf', 'foder', 'pesadelo'
-];
-
-// Domínios de email legítimos aceitos
-const LEGITIMATE_DOMAINS = [
-  'gmail.com', 'outlook.com', 'hotmail.com', 'yahoo.com',
-  'live.com', 'icloud.com', 'protonmail.com', 'zoho.com',
-  'aol.com', 'mail.com', 'gmx.com'
-];
-
-// Domínios de email temporários/descartáveis (bloqueados)
-const DISPOSABLE_DOMAINS = [
-  'tempmail.com', 'guerrillamail.com', '10minutemail.com',
-  'throwaway.email', 'mailinator.com', 'trashmail.com',
-  'yopmail.com', 'fakeinbox.com', 'temp-mail.org'
-];
 
 // Função para verificar Turnstile
 async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
