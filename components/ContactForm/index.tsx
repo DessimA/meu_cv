@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -32,13 +32,21 @@ const ContactForm = ({ id }: ContactFormProps) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    watch
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema)
   });
 
+  const watchedFields = watch();
+
+  useEffect(() => {
+    if (submitStatus !== 'idle') {
+      setSubmitStatus('idle');
+    }
+  }, [watchedFields]);
+
   const onSubmit = async (data: ContactFormData) => {
-    // Verificar se o Turnstile foi completado
     if (!turnstileToken) {
       setErrorMessage('Por favor, complete a verificação de segurança.');
       setSubmitStatus('error');
@@ -67,7 +75,6 @@ const ContactForm = ({ id }: ContactFormProps) => {
         setSubmitStatus('success');
         reset();
         setTurnstileToken('');
-        // Resetar o Turnstile widget
         if (turnstileRef.current) {
           turnstileRef.current.reset();
         }
@@ -79,9 +86,7 @@ const ContactForm = ({ id }: ContactFormProps) => {
       setSubmitStatus('error');
       setErrorMessage('Erro de conexão. Verifique sua internet e tente novamente.');
     } finally {
-      setTimeout(() => {
-        setIsSubmitting(false);
-      }, 1000);
+      setIsSubmitting(false);
     }
   };
 
