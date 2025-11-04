@@ -74,10 +74,16 @@ const ContactForm = ({ id }: ContactFormProps) => {
                 }, 5000); // Clear success message after 5 seconds
               } else {        setSubmitStatus('error');
         setErrorMessage(result.error || 'Erro ao enviar mensagem. Tente novamente.');
+        if (turnstileRef.current) {
+          turnstileRef.current.reset();
+        }
       }
     } catch (error) {
       setSubmitStatus('error');
       setErrorMessage('Erro de conexão. Verifique sua internet e tente novamente.');
+      if (turnstileRef.current) {
+        turnstileRef.current.reset();
+      }
     } finally {
       setIsSubmitting(false);
     }
