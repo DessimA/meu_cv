@@ -198,9 +198,9 @@ Possuo experiência em arquitetura de infraestrutura na AWS e automação de CI/
       ],
     },
     {
-      name: "Gerenciador de Credenciais (Full Stack)",
+      name: "Gerenciador de Chaves (Full Stack)",
       githubLink: "https://github.com/dessima/gerenciador-chaves",
-      technologies: "Go, React, PostgreSQL, Docker, Docker Compose, Nginx",
+      technologies: "Go, React, SQLite, Docker, Docker Compose, Nginx",
       description: "Aplicação full stack para gerenciamento seguro de credenciais com backend em Go, frontend em React, banco PostgreSQL e deploy completo com Docker Compose + Nginx.",
       features: [
         "Backend RESTful em Go com arquitetura em camadas",
@@ -208,7 +208,7 @@ Possuo experiência em arquitetura de infraestrutura na AWS e automação de CI/
         "Autenticação JWT",
         "Deploy containerizado com Docker Compose",
         "Nginx como reverse proxy e load balancer",
-        "Banco de dados PostgreSQL"
+        "Banco de dados SQLite"
       ],
     },
     {
